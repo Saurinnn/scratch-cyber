@@ -1,0 +1,75 @@
+/* --- CSSリセット（モダン）--- */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html, body {
+height: 100%;
+font-family: sans-serif;
+}
+
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+height: auto;
+}
+
+input, button, textarea, select {
+font: inherit;
+border: none;
+background: none;
+outline: none;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+ul, ol {
+list-style: none;
+}
+
+/*あとで消す*/
+
+.logo{
+  width: 100%;
+  height: 179px;
+  background-color: #000;
+}
+.nav{
+  width: 100%;
+  height: 60px;
+  background-color: #00FFF5;
+}
+
+/*カバーエリア*/
+#my-cover{
+  width: 100%;
+  height: 765px;
+}
+
+.my-cover-text{
+  color: #fff;
+  font-size: 100px;
+  font-family: 'Exo',sans-serif; 
+  padding-top: 300px;
+  padding-left: 100px;
+}
+
+#my-cover p{
+  color: #fff;
+  font-size: 24px;
+  padding-left: 100px;
+}
+
+/*テキストエリア*/
+.text-area01{
+  background-image: url("img/cyber.jpg");
+  background-size: cover;
+  height: 100vh;
+}
