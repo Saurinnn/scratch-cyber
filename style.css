@@ -350,6 +350,10 @@ margin-top:10px;
  }
 
  @media screen and (max-width: 540px) {
+  .logo{
+    display: none;
+  }
+
   .my-cover-text{
     font-size: 60px;
     padding-top: 200px;
@@ -357,6 +361,12 @@ margin-top:10px;
   }
   #my-cover p{
     padding-left: 50px;
+  }
+
+  .scroll{
+    position: absolute;
+    top: 65%;
+    left: 10px;
   }
 
   .img-KEN{
