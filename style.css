@@ -69,7 +69,7 @@ list-style: none;
   padding-left: 100px;
 }
 
-.scroll{
+.my-scroll{
   position: absolute;
   top: 70%;
   left: 20px;
@@ -363,7 +363,7 @@ margin-top:10px;
     padding-left: 50px;
   }
 
-  .scroll{
+  .my-scroll{
     position: absolute;
     top: 65%;
     left: 10px;
