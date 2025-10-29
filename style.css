@@ -51,6 +51,8 @@ list-style: none;
 #my-cover{
   width: 100%;
   height: 765px;
+  position: relative;
+  z-index: 1;
 }
 
 .my-cover-text{
@@ -66,6 +68,70 @@ list-style: none;
   font-size: 24px;
   padding-left: 100px;
 }
+
+.scroll{
+  position: absolute;
+  top: 70%;
+  left: 20px;
+}
+    
+    .container {
+      display: flex;
+      align-items: center;
+margin-top:2px;
+      
+      
+margin-left:10px;
+    }
+
+    .line {
+margin-top:10px;
+      
+      position: relative;
+      width: 2px;
+      height: 50px;
+      background-color: #00fff5;
+      transform: rotate(0deg);
+    }
+
+    .ball {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #00fff5;
+      border-radius: 50%;
+      top: -8px;
+      left: -4px; /* Center the ball on the line */
+      animation: moveBall 2s infinite;
+    }
+
+    .scroll-text {
+      color: #00fff5;
+      font-size: 11px;
+      margin-left: 2px;
+      transform: rotate(90deg);
+      font-family: 'Exo', sans-serif;
+    }
+
+    @keyframes moveBall {
+      0% {
+        opacity: 0;
+        transform: translateY(0);
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      95% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+    }
 
 /*テキストエリア01*/
 .text-area01{
@@ -116,12 +182,18 @@ list-style: none;
 }
 
 .text01-text h3{
+  font-family: "Workbench", sans-serif;
   text-align: center;
   font-size: 36px;
   padding: 50px 0 0 30px;
+  color: #0da578;
 }
 
-.sec01{
+.text01-text h4{
+  text-align: center;
+}
+
+.sec-size{
   margin: 0 auto;
   width: 80%;
   padding: 50px 30px;
@@ -130,19 +202,39 @@ list-style: none;
 /*テキストエリア02*/
 .text-area02{
   width: 100%;
-  background-color: #000;
-  padding: 100px 30px;
+  background-color: #0A0B20;
   position: relative;
   z-index: -2;
 }
 
 .text-box02{
   display: flex;
+  justify-content: center;
+  padding: 100px 30px;
+}
+
+.text-box02 h3{
+  font-family: "Workbench", sans-serif;
+  text-align: center;
+  font-size: 36px;
+  padding: 50px 0 0 30px;
+  color: #0da578;
+}
+
+.text-box02 h4{
+  text-align: center;
 }
 
 .img-KEN{
   width: 500px;
   height: 280px;
+  box-shadow: 5px 5px 0px 0px rgba(0, 255, 245, 0.4), 10px 10px 0px 0px rgba(0, 255, 245, 0.3), 15px 15px 0px 0px rgba(0, 255, 245, 0.2), 20px 20px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.img-TIN{
+  width: 500px;
+  height: 280px;
+  box-shadow: 5px 5px 0px 0px rgba(0, 255, 245, 0.4), 10px 10px 0px 0px rgba(0, 255, 245, 0.3), 15px 15px 0px 0px rgba(0, 255, 245, 0.2), 20px 20px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .sec02{
@@ -152,14 +244,20 @@ list-style: none;
 }
 
 .sec02 h3{
+  font-family: "Workbench", sans-serif;
   text-align: center;
   font-size: 36px;
   padding: 50px 0 0 30px;
+  color: #0da578;
+}
+
+.sec02 h4{
+  text-align: center;
 }
 
 .sec02 p{
-  padding: 50px 30px;
-  font-size: 18px;
+  padding: 15px 30px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -169,12 +267,106 @@ list-style: none;
 
 .text02-image{
   position: absolute;
-  width: 100%;
   z-index: -1;
 }
 
-.text02-image img{
-  margin:0 auto;
-  width: 100%;
-  height: auto;
+.space{
+  background-size: cover;
+  height: 150vh;
 }
+
+/*TINパート*/
+.chapter03{
+  display: flex;
+  justify-content: center;
+  padding: 0 30px 100px 30px;
+  position: relative;
+}
+
+.space-static{
+  top: 100px;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/*ファイナル*/
+.text03-text h3{
+  font-family: "Workbench", sans-serif;
+  text-align: center;
+  font-size: 36px;
+  padding: 50px 0 0 30px;
+  color: #0da578;
+}
+
+.text03-text h4{
+  text-align: center;
+}
+
+.text03-text p{
+  padding: 15px 30px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+ /*レスポンシブ対応*/
+ @media screen and (max-width: 900px) {  
+  .text01-text{
+    width: 80%;
+  }
+
+  .text-box02{
+    display: block;
+    }
+    .sec02{
+      margin: 0 auto;
+      width: 80%;
+    }
+
+    .img-KEN{
+      margin:50px auto;
+    }
+
+    .text02-image{
+      top: 300px;
+      }
+
+    .space{
+      background-size: cover;
+      height: 100%;
+    }
+
+    .chapter03{
+      display: flex; /* Flexboxコンテナにする */
+      flex-direction: column-reverse;
+      justify-content: center;
+      padding: 0 30px 100px 30px;
+      position: relative;
+    }
+
+    .img-TIN{
+      margin:50px auto;
+    }
+ }
+
+ @media screen and (max-width: 540px) {
+  .my-cover-text{
+    font-size: 60px;
+    padding-top: 200px;
+    padding-left: 50px;
+  }
+  #my-cover p{
+    padding-left: 50px;
+  }
+
+  .img-KEN{
+    width: 300px;
+    height: auto;
+  }
+
+  .img-TIN{
+    width: 300px;
+    height: auto;
+  }
+
+ }
