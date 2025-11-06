@@ -377,6 +377,28 @@ margin-top:10px;
     left: 10px;
   }
 
+  .text01-text h3{
+    font-size: 36px;
+    padding: 30px 10px;
+    color: #0da578;
+  }
+
+  .sec-size{
+    padding: 50px 0;
+  }
+
+  .sec02{
+    width: 100%;
+  }
+
+  .sec02 h3{
+    padding: 30px 10px;
+    }
+
+  .sec02 p{
+    padding: 50px 0;
+  }
+
   .img-KEN{
     width: 300px;
     height: auto;
@@ -385,6 +407,16 @@ margin-top:10px;
   .img-TIN{
     width: 300px;
     height: auto;
+  }
+
+  .space-static{
+   text-align: center;
+   left: 0; 
+   width: 100%;
+  }
+
+  .text03-text p{
+    padding: 50px 0;
   }
 
  }
