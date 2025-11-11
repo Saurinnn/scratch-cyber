@@ -502,6 +502,10 @@ margin-top:10px;
  }
 
  @media screen and (max-width: 540px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
   .logo{
     display: none;
   }
