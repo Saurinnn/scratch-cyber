@@ -47,6 +47,44 @@ list-style: none;
   background-color: #00FFF5;
 }
 
+/*音楽*/
+#audioButton {
+  font-family: 'Exo', sans-serif;
+  font-size: 13px;
+  color: #BFBFBF;
+  font-weight: normal;
+  cursor: pointer;
+  text-decoration: none;
+  position: absolute;
+  top:10px;
+  right: 10px;
+}
+
+#audioButton.on {
+  color: #ffffff; /* SOUND ONの時の文字色 */
+  font-weight: bold; /* SOUND ONの時にボールド */
+}
+
+#audioButton.off {
+  color: #BFBFBF; /* SOUND OFFの時の文字色 */
+  font-weight: bold; /* SOUND OFFの時にボールド */
+}
+
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  color: #BFBFBF; /* 初期状態はSOUND OFFの文字色と同じ */
+  font-size: 18px;
+  margin-left: 2px; /* アイコンと文字列の間に余白 */
+}
+
+.fas.on {
+  color: #ffffff; /* SOUND ONの時のアイコン色 */
+}
+
+.fas.off {
+  color: #BFBFBF; /* SOUND OFFの時のアイコン色 */
+}
+
 /*カバーエリア*/
 #my-cover{
   width: 100%;
@@ -151,6 +189,58 @@ margin-top:10px;
         transform: translateY(50px);
       }
     }
+
+/*スクロールボックス*/
+.scroll-wrap{
+  position: absolute;
+  top: 80%;
+  right: 20px;
+}
+
+ /* ボックス全体のスタイル */
+ .my-scroll-box {
+  width: 360px;
+  height: 32px;
+  border: 1px solid #00fff5;
+  background-color: #000;
+  overflow: hidden;
+  display: flex; /* Flexbox を有効にする */
+  align-items: center; /* 縦方向の中央揃え */
+  position: relative;
+}
+
+/* スクロールさせるテキスト */
+.scroll-text-box {
+  display: inline-block;
+  font-size: 14px;
+  font-family: "Workbench", sans-serif;
+  font-weight: bold;
+  white-space: nowrap;
+  position: absolute;
+  animation: scroll 10s linear infinite;
+}
+
+/* 特定部分の文字色設定 */
+.date {
+  color: #fff;
+  margin-right: 10px;
+}
+
+.details {
+  color: #00fff5;
+}
+
+/* スクロールアニメーション */
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 
 /*テキストエリア01*/
 .text-area01{
@@ -369,6 +459,10 @@ margin-top:10px;
 
  /*レスポンシブ対応*/
  @media screen and (max-width: 900px) {  
+  .scroll-wrap{
+    top: 15%;
+  }
+
   .text01-text{
     width: 80%;
   }
@@ -421,12 +515,20 @@ margin-top:10px;
     padding-left: 50px;
   }
 
+  #my-cover h2{
+    width: 300px;
+    font-size: 24px;
+    margin-left: 50px;
+  }
   .my-scroll{
     position: absolute;
     top: 65%;
     left: 10px;
   }
 
+  .my-scroll-box {
+    width: 250px;
+  }
   .text01-text h3{
     font-size: 36px;
     padding: 30px 10px;

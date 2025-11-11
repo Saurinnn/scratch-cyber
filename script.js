@@ -10,6 +10,29 @@ document.addEventListener("DOMContentLoaded", () => {
     scaleMobile: 1.00,
     color: 0x3fffd1
   })
+
+  const button = document.getElementById("audioButton");
+  button.addEventListener("click", toggleAudio);
+
+  function toggleAudio() {
+    const audio = document.getElementById("myAudio");
+    const audioText = document.getElementById("audioText");
+    const icon = document.querySelector(".fas");
+
+    if (audio.paused) {
+      audio.play(); // 再生
+      audioText.textContent = 'SOUND ON'; // 文字列のみを変更
+      button.className = "on"; // クラスを変更してスタイル適用
+      icon.textContent = '\uf027';
+      icon.className = "fas on"; // アイコンのクラスを変更して色を変更
+    } else {
+      audio.pause(); // 停止
+      audioText.textContent = 'SOUND OFF'; // 文字列のみを変更
+      button.className = "off"; // クラスを変更してスタイル適用
+      icon.textContent = '\uf026';
+      icon.className = "fas off"; // アイコンのクラスを変更して色を変更
+    }
+  }
   
   const images = document.querySelectorAll(".text01-text, .sec02, .img-KEN, .img-TIN");
 

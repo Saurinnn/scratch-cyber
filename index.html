@@ -25,49 +25,7 @@
     <p>すべての攻撃から防御せよ</p>
     <a href="#chapter01"><h2>Read Now</h2></a>
     <!--音楽埋め込み-->
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
-          
-          
-      
-          #audioButton {
-            font-family: 'Exo', sans-serif;
-            font-size: 13px;
-            color: #BFBFBF;
-            font-weight: normal;
-            cursor: pointer;
-            text-decoration: none;
-            position: absolute;
-            top:10px;
-            right: 10px;
-          }
-      
-          #audioButton.on {
-            color: #ffffff; /* SOUND ONの時の文字色 */
-            font-weight: bold; /* SOUND ONの時にボールド */
-          }
-      
-          #audioButton.off {
-            color: #BFBFBF; /* SOUND OFFの時の文字色 */
-            font-weight: bold; /* SOUND OFFの時にボールド */
-          }
-      
-          .fas {
-            font-family: 'Font Awesome 5 Free';
-            color: #BFBFBF; /* 初期状態はSOUND OFFの文字色と同じ */
-            font-size: 18px;
-            margin-left: 2px; /* アイコンと文字列の間に余白 */
-          }
-      
-          .fas.on {
-            color: #ffffff; /* SOUND ONの時のアイコン色 */
-          }
-      
-          .fas.off {
-            color: #BFBFBF; /* SOUND OFFの時のアイコン色 */
-          }
-        </style>
-        <span id="audioButton" class="off" onclick="toggleAudio()">
+        <span id="audioButton" class="off">
           <span id="audioText">SOUND OFF</span>
           <i class="fas">&#xf026;</i>
         </span>
@@ -76,31 +34,6 @@
           Your browser does not support the audio element.
         </audio>
       
-        <script>
-          function toggleAudio() {
-            const audio = document.getElementById("myAudio");
-            const button = document.getElementById("audioButton");
-            const audioText = document.getElementById("audioText");
-            const icon = document.querySelector(".fas");
-      
-            if (audio.paused) {
-              audio.play(); // 再生
-              audioText.textContent = 'SOUND ON'; // 文字列のみを変更
-              button.className = "on"; // クラスを変更してスタイル適用
-              icon.textContent = '\uf027';
-              icon.className = "fas on"; // アイコンのクラスを変更して色を変更
-            } else {
-              audio.pause(); // 停止
-              audioText.textContent = 'SOUND OFF'; // 文字列のみを変更
-              button.className = "off"; // クラスを変更してスタイル適用
-              icon.textContent = '\uf026';
-              icon.className = "fas off"; // アイコンのクラスを変更して色を変更
-            }
-          }
-        </script>
-
-      
-
     <!--スクロール案内-->
     <div class="my-scroll">
       <div class="container">
@@ -111,7 +44,21 @@
     
     </div>
   </div>
+
+   <!--文字スクロールボックス-->
+   <div class="scroll-wrap"> 
+   <div class="my-scroll-box">
+      <div class="scroll-text-box">
+        <span class="date">2099.02.02</span>
+        <span class="details"> The Battle Story of KEN VS TIN</span>
+      </div>
+    </div>
   </div>
+  
+  <!--ここまで-->
+  </div>
+
+
   <!-- エリア1 -->
   <div class="text-area01">
     <div class="background"></div>
